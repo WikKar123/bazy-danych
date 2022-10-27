@@ -1,0 +1,33 @@
+mysql> CREATE TABLE postac (id_postaci INT PRIMARY KEY NOT NULL, nazwa varchar(40), rodzaj varchar(40), data_ur varchar(40), wiek varchar(40));
+
+
+
+mysql> INSERT INTO postac (id_postaci,nazwa) values ('1','bjorn');
+mysql> INSERT INTO postac (id_postaci,nazwa) values ('2','drozd');
+mysql> INSERT INTO postac (id_postaci,nazwa) values ('3','tesciowa');
+
+
+
+mysql> update postac set data_ur='21.03.1992' where id_postaci='1';
+mysql> update postac set data_ur='12.02.1965' where id_postaci='3';
+mysql> update postac set data_ur='12.06.1982' where id_postaci='2';
+
+
+
+
+
+
+
+mysql> update postac set wiek='30' where id_postaci='1';
+mysql> update postac set wiek='40' where id_postaci='2';
+mysql> update postac set wiek='88' where id_postaci='3';
+
+mysql> select *from postac;
+
++------------+----------+----------+------------+------+
+| id_postaci | nazwa    | rodzaj   | data_ur    | wiek |
++------------+----------+----------+------------+------+
+|          1 | bjorn    | wiking   | 21.03.1992 | 30   |
+|          2 | drozd    | ptak     | 12.06.1982 | 40   |
+|          3 | tesciowa | tesciowa | 12.02.1965 | 88   |
++------------+----------+----------+------------+------+
